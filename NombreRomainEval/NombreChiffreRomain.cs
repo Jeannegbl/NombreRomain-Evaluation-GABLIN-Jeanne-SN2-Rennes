@@ -13,8 +13,8 @@ public class NombreChiffreRomain
             
             4 => Unite + Cinq,
             9 => Unite + Dix,
-            <= 13 => NombreBoucle(nombre),
             14 => Dix + Unite + Cinq,
+            <= 15 => NombreBoucle(nombre),
             _ => throw new NotImplementedException(),
         };
     }
@@ -25,12 +25,12 @@ public class NombreChiffreRomain
         if (nombre >= 10)
         {
             nombre = nombre - 10;
-            resultat_romain = "X";
+            resultat_romain = resultat_romain + "X";
         }
         if (nombre >= 5)
         {
             nombre = nombre - 5;
-            resultat_romain = "V";
+            resultat_romain = resultat_romain + "V";
         }
         for (int i = 0; i < nombre; i++)
         {
