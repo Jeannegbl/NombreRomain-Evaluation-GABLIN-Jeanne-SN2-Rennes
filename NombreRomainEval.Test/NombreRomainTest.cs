@@ -47,7 +47,6 @@ namespace NombreRomainEval.Test
                 nb = nb - 10;
                 nombre = nombre + "X";
             }
-
             if (nb == 9)
             {
                 nb = nb - 9;
@@ -63,7 +62,6 @@ namespace NombreRomainEval.Test
                 nb = nb - 5;
                 nombre = nombre + "V";
             }
-
             while (nb >= 1)
             {
                 nb = nb - 1;
