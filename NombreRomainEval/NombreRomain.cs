@@ -6,7 +6,7 @@
         {
             return nombre switch
             {
-                <= 30 => NombreChiffreRomain.Nombre(nombre),
+                <= 50 => NombreChiffreRomain.Nombre(nombre),
                 _ => throw new NotImplementedException()
             };
         }

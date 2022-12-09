@@ -5,10 +5,21 @@ public class NombreChiffreRomain
     public static readonly string Unite = "I";
     public static readonly string Cinq = "V";
     public static readonly string Dix = "X";
+    public static readonly string Cinquante = "L";
 
     public static string Nombre(int nombre)
     {
         var resultat_romain = "";
+        if (nombre >= 40 && nombre < 50)
+        {
+            nombre = nombre - 40;
+            resultat_romain = resultat_romain + Dix + Cinquante;
+        }
+        while (nombre >= 50)
+        {
+            nombre = nombre - 50;
+            resultat_romain = resultat_romain + Cinquante;
+        }
         while (nombre >= 10)
         {
             nombre = nombre - 10;
