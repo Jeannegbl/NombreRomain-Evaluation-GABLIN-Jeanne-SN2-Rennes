@@ -4,6 +4,7 @@ public class NombreChiffreRomain
 {
     public static readonly string Unite = "I";
     public static readonly string Cinq = "V";
+    public static readonly string Dix = "X";
 
     public static string Nombre(int nombre)
     {
@@ -12,6 +13,7 @@ public class NombreChiffreRomain
             <= 3 => NombreBoucle(nombre),
             4 => Unite + Cinq,
             <= 8 => NombreBoucle(nombre),
+            9 => Unite + Dix,
             _ => throw new NotImplementedException(),
         };
     }
