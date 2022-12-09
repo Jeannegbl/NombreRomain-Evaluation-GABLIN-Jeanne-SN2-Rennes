@@ -9,7 +9,7 @@
                 4 => NombreChiffreRomain.Nombre(4),
                 9 => NombreChiffreRomain.Nombre(9),
                 14 => NombreChiffreRomain.Nombre(14),
-                <= 15 => NombreChiffreRomain.Nombre(nombre),
+                <= 16 => NombreChiffreRomain.Nombre(nombre),
                 _ => throw new NotImplementedException()
             };
         }
