@@ -14,8 +14,8 @@ public class NombreChiffreRomain
             4 => Unite + Cinq,
             9 => Unite + Dix,
             14 => Dix + Unite + Cinq,
-            <= 18 => NombreBoucle(nombre),
             19 => Dix + Unite + Dix,
+            <= 20 => NombreBoucle(nombre),
             _ => throw new NotImplementedException(),
         };
     }
@@ -23,12 +23,12 @@ public class NombreChiffreRomain
     public static string NombreBoucle(int nombre)
     {
         var resultat_romain = "";
-        if (nombre >= 10)
+        while (nombre >= 10)
         {
             nombre = nombre - 10;
             resultat_romain = resultat_romain + "X";
         }
-        if (nombre >= 5)
+        while (nombre >= 5)
         {
             nombre = nombre - 5;
             resultat_romain = resultat_romain + "V";
