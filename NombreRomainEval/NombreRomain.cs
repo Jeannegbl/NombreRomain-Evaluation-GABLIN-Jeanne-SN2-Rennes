@@ -11,8 +11,8 @@
                 14 => NombreChiffreRomain.Nombre(14),
                 19 => NombreChiffreRomain.Nombre(19),
                 24 => NombreChiffreRomain.Nombre(24),
-                <= 28 => NombreChiffreRomain.Nombre(nombre),
                 29 => NombreChiffreRomain.Nombre(29),
+                <= 30 => NombreChiffreRomain.Nombre(nombre),
                 _ => throw new NotImplementedException()
             };
         }
