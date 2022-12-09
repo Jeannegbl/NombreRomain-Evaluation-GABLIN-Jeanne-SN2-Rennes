@@ -2,48 +2,41 @@ namespace NombreRomainEval.Test
 {
     public class NombreRomainTest
     {
-        [Fact]
-        public void Nombre1()
+        public int nb;
+        public string nombre;
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(5)]
+        [InlineData(6)]
+        [InlineData(7)]
+        [InlineData(8)]
+        public void Nombres(int n)
         {
-            // ETANT DONNEE le nombre 1
-            const int nombre = 1;
+            // ETANT DONNER un nombre <n> compris entre 1 et 8 sans 4
 
             // QUAND on le convertit en nombres romains
-            var resultat = NombreRomain.Convertir(nombre);
+            var resultat = NombreRomain.Convertir(n);
+            nb = n;
+            while (nb >= 5)
+            {
+                nb = nb - 5;
+                nombre = nombre + "V";
+            }
 
-            // ALORS on obtient le nombre I
-            var attendu = "I";
+            while (nb >= 1)
+            {
+                nb = nb - 1;
+                nombre = nombre + "I";
+            }
+
+            // ALORS on obtient son nombre romain comprit entre I et VIII sans IV
+            var attendu = nombre;
 
             Assert.Equal(attendu, resultat);
         }
-        [Fact]
-        public void Nombre2()
-        {
-            // ETANT DONNEE le nombre 2
-            const int nombre = 2;
 
-            // QUAND on le convertit en nombres romains
-            var resultat = NombreRomain.Convertir(nombre);
-
-            // ALORS on obtient le nombre II
-            var attendu = "II";
-
-            Assert.Equal(attendu, resultat);
-        }
-        [Fact]
-        public void Nombre3()
-        {
-            // ETANT DONNEE le nombre 3
-            const int nombre = 3;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = NombreRomain.Convertir(nombre);
-
-            // ALORS on obtient le nombre III
-            var attendu = "III";
-
-            Assert.Equal(attendu, resultat);
-        }
         [Fact]
         public void Nombre4()
         {
@@ -55,62 +48,6 @@ namespace NombreRomainEval.Test
 
             // ALORS on obtient le nombre IV
             var attendu = "IV";
-
-            Assert.Equal(attendu, resultat);
-        }
-        [Fact]
-        public void Nombre5()
-        {
-            // ETANT DONNEE le nombre 5
-            const int nombre = 5;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = NombreRomain.Convertir(nombre);
-
-            // ALORS on obtient le nombre V
-            var attendu = "V";
-
-            Assert.Equal(attendu, resultat);
-        }
-        [Fact]
-        public void Nombre6()
-        {
-            // ETANT DONNEE le nombre 6
-            const int nombre = 6;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = NombreRomain.Convertir(nombre);
-
-            // ALORS on obtient le nombre VI
-            var attendu = "VI";
-
-            Assert.Equal(attendu, resultat);
-        }
-        [Fact]
-        public void Nombre7()
-        {
-            // ETANT DONNEE le nombre 7
-            const int nombre = 7;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = NombreRomain.Convertir(nombre);
-
-            // ALORS on obtient le nombre VII
-            var attendu = "VII";
-
-            Assert.Equal(attendu, resultat);
-        }
-        [Fact]
-        public void Nombre8()
-        {
-            // ETANT DONNEE le nombre 8
-            const int nombre = 8;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = NombreRomain.Convertir(nombre);
-
-            // ALORS on obtient le nombre VIII
-            var attendu = "VIII";
 
             Assert.Equal(attendu, resultat);
         }
