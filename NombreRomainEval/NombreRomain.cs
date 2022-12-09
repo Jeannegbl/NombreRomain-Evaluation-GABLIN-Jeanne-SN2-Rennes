@@ -9,6 +9,7 @@
                 1 => NombreChiffreRomain.Unite,
                 2 => NombreChiffreRomain.Nombre(2),
                 3 => NombreChiffreRomain.Nombre(3),
+                4 => NombreChiffreRomain.Nombre(4),
                 _ => throw new NotImplementedException()
             };
         }

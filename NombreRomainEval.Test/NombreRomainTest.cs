@@ -44,5 +44,19 @@ namespace NombreRomainEval.Test
 
             Assert.Equal(attendu, resultat);
         }
+        [Fact]
+        public void Nombre4()
+        {
+            // ETANT DONNEE le nombre 4
+            const int nombre = 4;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = NombreRomain.Convertir(nombre);
+
+            // ALORS on obtient le nombre IV
+            var attendu = "IV";
+
+            Assert.Equal(attendu, resultat);
+        }
     }
 }

@@ -3,6 +3,7 @@
 public class NombreChiffreRomain
 {
     public static readonly string Unite = "I";
+    public static readonly string Cinq = "V";
 
     public static string Nombre(int nombre)
     {
@@ -10,6 +11,8 @@ public class NombreChiffreRomain
             return Unite + Unite;
         else if (nombre == 3)
             return Unite + Unite + Unite;
+        else if (nombre == 4)
+            return Unite + Cinq;
         else
             return "ERREUR";
     }
