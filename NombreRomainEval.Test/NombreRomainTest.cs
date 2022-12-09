@@ -12,6 +12,7 @@ namespace NombreRomainEval.Test
         [InlineData(6)]
         [InlineData(7)]
         [InlineData(8)]
+        [InlineData(10)]
         public void Nombres(int n)
         {
             // ETANT DONNER un nombre <n> compris entre 1 et 8 sans 4
@@ -19,6 +20,11 @@ namespace NombreRomainEval.Test
             // QUAND on le convertit en nombres romains
             var resultat = NombreRomain.Convertir(n);
             nb = n;
+            while (nb >= 10)
+            {
+                nb = nb - 10;
+                nombre = nombre + "X";
+            }
             while (nb >= 5)
             {
                 nb = nb - 5;
