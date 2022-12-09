@@ -8,32 +8,26 @@ public class NombreChiffreRomain
 
     public static string Nombre(int nombre)
     {
-        return nombre switch
-        {
-            
-            4 => Unite + Cinq,
-            9 => Unite + Dix,
-            14 => Dix + Unite + Cinq,
-            19 => Dix + Unite + Dix,
-            24 => Dix + Dix + Unite + Cinq,
-            29 => Dix + Dix + Unite + Dix,
-            <= 30 => NombreBoucle(nombre),
-            _ => throw new NotImplementedException(),
-        };
-    }
-
-    public static string NombreBoucle(int nombre)
-    {
         var resultat_romain = "";
         while (nombre >= 10)
         {
             nombre = nombre - 10;
-            resultat_romain = resultat_romain + "X";
+            resultat_romain = resultat_romain + Dix;
+        }
+        if (nombre == 9)
+        {
+            nombre = nombre - 9;
+            resultat_romain = resultat_romain + Unite + Dix;
+        }
+        if (nombre == 4)
+        {
+            nombre = nombre - 4;
+            resultat_romain = resultat_romain + Unite + Cinq;
         }
         while (nombre >= 5)
         {
             nombre = nombre - 5;
-            resultat_romain = resultat_romain + "V";
+            resultat_romain = resultat_romain + Cinq;
         }
         for (int i = 0; i < nombre; i++)
         {
