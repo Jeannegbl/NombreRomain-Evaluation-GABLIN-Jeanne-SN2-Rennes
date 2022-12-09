@@ -15,7 +15,9 @@ public class NombreChiffreRomain
             return Unite + Unite + Unite;
         else if (nombre == 4)
             return Unite + Cinq;
+        else if (nombre == 5)
+            return Cinq;
         else
-            return "ERREUR";
+            throw new NotImplementedException();
     }
 }

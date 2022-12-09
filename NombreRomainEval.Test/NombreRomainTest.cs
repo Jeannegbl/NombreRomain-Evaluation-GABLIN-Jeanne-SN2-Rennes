@@ -58,5 +58,19 @@ namespace NombreRomainEval.Test
 
             Assert.Equal(attendu, resultat);
         }
+        [Fact]
+        public void Nombre5()
+        {
+            // ETANT DONNEE le nombre 5
+            const int nombre = 5;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = NombreRomain.Convertir(nombre);
+
+            // ALORS on obtient le nombre V
+            var attendu = "V";
+
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
