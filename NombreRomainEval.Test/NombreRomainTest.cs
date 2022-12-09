@@ -26,9 +26,10 @@ namespace NombreRomainEval.Test
         [InlineData(23)]
         [InlineData(25)]
         [InlineData(26)]
+        [InlineData(27)]
         public void Nombres(int n)
         {
-            // ETANT DONNER un nombre <n> compris entre 1 et 26 sans 4, 9, 14, 19 et 24
+            // ETANT DONNER un nombre <n> compris entre 1 et 27 sans 4, 9, 14, 19 et 24
 
             // QUAND on le convertit en nombres romains
             var resultat = NombreRomain.Convertir(n);
@@ -50,7 +51,7 @@ namespace NombreRomainEval.Test
                 nombre = nombre + "I";
             }
 
-            // ALORS on obtient son nombre romain comprit entre I et XXVI sans IV, IX, XIV, XIX et XXIV
+            // ALORS on obtient son nombre romain comprit entre I et XXVII sans IV, IX, XIV, XIX et XXIV
             var attendu = nombre;
 
             Assert.Equal(attendu, resultat);
