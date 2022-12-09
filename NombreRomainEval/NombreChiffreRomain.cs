@@ -22,7 +22,7 @@ public class NombreChiffreRomain
         if (nombre >= 5)
         {
             nombre = nombre - 5;
-            resultat_romain = "VI";
+            resultat_romain = "V";
         }
         for (int i = 0; i < nombre; i++)
         {
