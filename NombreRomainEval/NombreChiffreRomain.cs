@@ -6,10 +6,21 @@ public class NombreChiffreRomain
     public static readonly string Cinq = "V";
     public static readonly string Dix = "X";
     public static readonly string Cinquante = "L";
+    public static readonly string Cent = "C";
 
     public static string Nombre(int nombre)
     {
         var resultat_romain = "";
+        if (nombre >= 90 && nombre < 100)
+        {
+            nombre = nombre - 90;
+            resultat_romain = resultat_romain + Dix + Cent;
+        }
+        while (nombre >= 100)
+        {
+            nombre = nombre - 100;
+            resultat_romain = resultat_romain + Cent;
+        }
         if (nombre >= 40 && nombre < 50)
         {
             nombre = nombre - 40;

@@ -94,13 +94,73 @@ namespace NombreRomainEval.Test
         [InlineData(48)]
         [InlineData(49)]
         [InlineData(50)]
+        [InlineData(51)]
+        [InlineData(52)]
+        [InlineData(53)]
+        [InlineData(54)]
+        [InlineData(55)]
+        [InlineData(56)]
+        [InlineData(57)]
+        [InlineData(58)]
+        [InlineData(59)]
+        [InlineData(60)]
+        [InlineData(61)]
+        [InlineData(62)]
+        [InlineData(63)]
+        [InlineData(64)]
+        [InlineData(65)]
+        [InlineData(66)]
+        [InlineData(67)]
+        [InlineData(68)]
+        [InlineData(69)]
+        [InlineData(70)]
+        [InlineData(71)]
+        [InlineData(72)]
+        [InlineData(73)]
+        [InlineData(74)]
+        [InlineData(75)]
+        [InlineData(76)]
+        [InlineData(77)]
+        [InlineData(78)]
+        [InlineData(79)]
+        [InlineData(80)]
+        [InlineData(81)]
+        [InlineData(82)]
+        [InlineData(83)]
+        [InlineData(84)]
+        [InlineData(85)]
+        [InlineData(86)]
+        [InlineData(87)]
+        [InlineData(88)]
+        [InlineData(89)]
+        [InlineData(90)]
+        [InlineData(91)]
+        [InlineData(92)]
+        [InlineData(93)]
+        [InlineData(94)]
+        [InlineData(95)]
+        [InlineData(96)]
+        [InlineData(97)]
+        [InlineData(98)]
+        [InlineData(99)]
+        [InlineData(100)]
         public void NombresBonus(int n)
         {
-            // ETANT DONNER un nombre <n> compris entre 31 et 50
+            // ETANT DONNER un nombre <n> compris entre 31 et 100
 
             // QUAND on le convertit en nombres romains
             var resultat = NombreRomain.Convertir(n);
             nb = n;
+            if (nb >= 90 && nb < 100)
+            {
+                nb = nb - 90;
+                nombre = nombre + "XC";
+            }
+            while (nb >= 100)
+            {
+                nb = nb - 100;
+                nombre = nombre + "C";
+            }
             if (nb >= 40 && nb < 50)
             {
                 nb = nb - 40;
@@ -137,7 +197,7 @@ namespace NombreRomainEval.Test
                 nombre = nombre + "I";
             }
 
-            // ALORS on obtient son nombre romain comprit entre XXXI et L
+            // ALORS on obtient son nombre romain comprit entre XXXI et C
             var attendu = nombre;
 
             Assert.Equal(attendu, resultat);
