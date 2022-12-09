@@ -72,5 +72,47 @@ namespace NombreRomainEval.Test
 
             Assert.Equal(attendu, resultat);
         }
+        [Fact]
+        public void Nombre6()
+        {
+            // ETANT DONNEE le nombre 6
+            const int nombre = 6;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = NombreRomain.Convertir(nombre);
+
+            // ALORS on obtient le nombre VI
+            var attendu = "VI";
+
+            Assert.Equal(attendu, resultat);
+        }
+        [Fact]
+        public void Nombre7()
+        {
+            // ETANT DONNEE le nombre 7
+            const int nombre = 7;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = NombreRomain.Convertir(nombre);
+
+            // ALORS on obtient le nombre VII
+            var attendu = "VII";
+
+            Assert.Equal(attendu, resultat);
+        }
+        [Fact]
+        public void Nombre8()
+        {
+            // ETANT DONNEE le nombre 8
+            const int nombre = 8;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = NombreRomain.Convertir(nombre);
+
+            // ALORS on obtient le nombre VIII
+            var attendu = "VIII";
+
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
