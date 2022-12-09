@@ -7,9 +7,9 @@ public class NombreChiffreRomain
     public static string Nombre(int nombre)
     {
         if (nombre == 2)
-            return "II";
+            return Unite + Unite;
         else if (nombre == 3)
-            return "III";
+            return Unite + Unite + Unite;
         else
             return "ERREUR";
     }
