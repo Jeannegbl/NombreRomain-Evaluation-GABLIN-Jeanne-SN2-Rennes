@@ -8,6 +8,8 @@ public class NombreChiffreRomain
     {
         if (nombre == 2)
             return "II";
+        else if (nombre == 3)
+            return "III";
         else
             return "ERREUR";
     }
