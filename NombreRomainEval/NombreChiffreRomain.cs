@@ -10,11 +10,10 @@ public class NombreChiffreRomain
     {
         return nombre switch
         {
-            <= 3 => NombreBoucle(nombre),
+            
             4 => Unite + Cinq,
-            <= 8 => NombreBoucle(nombre),
             9 => Unite + Dix,
-            <= 11 => NombreBoucle(nombre),
+            <= 12 => NombreBoucle(nombre),
             _ => throw new NotImplementedException(),
         };
     }
