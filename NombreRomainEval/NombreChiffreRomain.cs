@@ -15,6 +15,7 @@ public class NombreChiffreRomain
             9 => Unite + Dix,
             14 => Dix + Unite + Cinq,
             <= 18 => NombreBoucle(nombre),
+            19 => Dix + Unite + Dix,
             _ => throw new NotImplementedException(),
         };
     }
