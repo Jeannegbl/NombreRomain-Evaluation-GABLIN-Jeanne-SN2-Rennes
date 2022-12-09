@@ -128,5 +128,19 @@ namespace NombreRomainEval.Test
 
             Assert.Equal(attendu, resultat);
         }
+        [Fact]
+        public void Nombre29()
+        {
+            // ETANT DONNEE le nombre 29
+            const int nombre = 29;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = NombreRomain.Convertir(nombre);
+
+            // ALORS on obtient le nombre XXIV
+            var attendu = "XXIX";
+
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
